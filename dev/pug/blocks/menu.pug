@@ -1,0 +1,7 @@
+nav.main-nav
+    ul.main-menu
+        each page in pages
+            if page == 'inicio'
+                li.main-menu__item: a(href='index.html').main-menu__link #{page}
+            else
+                li.main-menu__item: a(href=page + '.html').main-menu__link #{page}
