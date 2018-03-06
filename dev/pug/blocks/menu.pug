@@ -1,4 +1,23 @@
+//-nav.main-nav
+    ul.main-menu
+        each page in pages
+            if page == 'inicio'
+                li.main-menu__item: a(href='index.html').main-menu__link #{page}
+            else
+                li.main-menu__item: a(href=page + '.html').main-menu__link #{page}
+
 nav.main-nav
+    //- Es el elemento que abrirá el panel de elementos
+    span.toggle-elements#toggle-elements ELEMENTOS
+    //- Es el elemento que abrirá el menú principal
+    span.toggle-menu#toggle-menu MENÚ
+
+    //- Elementos
+    ul.elements
+        each element in elements
+            li.elements__item: a(href=element + '.html').elements__link #{element}
+
+    //- Menú principal
     ul.main-menu
         each page in pages
             if page == 'inicio'

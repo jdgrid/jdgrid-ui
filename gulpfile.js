@@ -15,7 +15,7 @@ let pugOptions = {
 };
 
 let autoprefixerOptions = {
-    versions: 'last 4 options'
+    browsers: ['last 2 versions']
 };
 
 
@@ -38,6 +38,6 @@ gulp.task('pug', () => {
 
 // WATCH (tarea por defecto)
 gulp.task('default', () => {
-    gulp.watch('./dev/scss/**/**', ['sass']); // Vigilar ficheros SCSS
-    gulp.watch('./dev/pug/**/**', ['pug']); // Vigilar ficheros PUG
+    gulp.watch('./dev/scss/**/**.scss', ['sass']); // Vigilar ficheros SCSS
+    gulp.watch('./dev/pug/**/**.pug', ['pug']); // Vigilar ficheros PUG
 });
